@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Searching Visualizer</title>
+    <link rel="stylesheet" href="searching.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered Searching Visualizer</h1>
+
+        <div class="controls">
+            <button class="btn" onclick="generateArray()">Generate Array</button>
+            <input type="text" id="customArray" placeholder="Enter custom array (comma-separated)" />
+            <button class="btn" onclick="getCustomArray()">Use Custom Array</button>
+        </div>
+
+        <div class="controls">
+            <input type="number" id="searchTarget" placeholder="Enter number to search" />
+        </div>
+
+        <div class="controls">
+            <select id="algorithm" class="dropdown">
+                <option value="linearSearch">Linear Search</option>
+                <option value="binarySearch">Binary Search</option>
+                <option value="jumpSearch">Jump Search</option>
+                <option value="exponentialSearch">Exponential Search</option>
+                <option value="aiPick">AI Pick</option>
+            </select>
+            <button class="btn" onclick="searchArray()">Search Array</button>
+        </div>
+
+        <div class="controls">
+            <label for="speed">Visualization Speed:</label>
+            <input type="range" id="speed" min="1" max="10" value="5" />
+        </div>
+
+        <div id="array-container"></div>
+        <div id="array-output"></div>
+        <div id="search-output"></div>
+        <p id="runtime"></p>
+    </div>
+
+    <script src="searching.js"></script>
+</body>
+</html>

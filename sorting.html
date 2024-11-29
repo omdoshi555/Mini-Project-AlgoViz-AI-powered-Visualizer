@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Sorting Visualizer</title>
+    <link rel="stylesheet" href="sorting.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Powered Sorting Visualizer</h1>
+
+        <div class="controls">
+            <button class="btn" onclick="generateArray()">Generate Array</button>
+            <input type="text" id="customArray" placeholder="Enter custom array (comma-separated)" />
+            <button class="btn" onclick="getCustomArray()">Use Custom Array</button>
+        </div>
+
+        <div class="controls">
+            <select id="algorithm" class="dropdown">
+                <option value="bubbleSort">Bubble Sort</option>
+                <option value="mergeSort">Merge Sort</option>
+                <option value="quickSort">Quick Sort</option>
+                <option value="insertionSort">Insertion Sort</option>
+                <option value="aiPick">AI Pick</option>
+            </select>
+            <button class="btn" onclick="sortArray()">Sort Array</button>
+        </div>
+
+        <div class="controls">
+            <label for="speed">Visualization Speed:</label>
+            <input type="range" id="speed" min="1" max="10" value="5" />
+        </div>
+
+        <div id="array-container"></div>
+        <div id="array-output"></div>
+        <p id="runtime"></p>
+    </div>
+
+    <script src="sorting.js"></script>
+</body>
+</html>
